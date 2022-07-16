@@ -5,7 +5,7 @@
 }
 body {
   color: #212529;
-  font-family: sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.1rem;
 }
 body,
@@ -24,7 +24,7 @@ html {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://images.unsplash.com/photo-1517059224940-d4af9eec41b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1305&q=80");
-
+  width: 100%;
   /* Set a specific height */
   height: 60%;
   margin-bottom: 90px;
@@ -126,7 +126,7 @@ ul li a {
   max-width: 250px;
 }
 .about-mepic {
-  max-width: 150px;
+  width: 150px;
 }
 .code-icon {
   width: 24px;
@@ -228,3 +228,44 @@ input {
   border-radius: 10px;
 }
 /* the hamburger icon  */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    max-width: 600px;
+  }
+  header {
+    width: 100%;
+  }
+  .project-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .About-me-box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .aboutme-info {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px;
+    width: 100%;
+  }
+  #form-box {
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+}
+@media screen and(max-width: 450px) {
+  header {
+    width: 100vw;
+  }
+  .aboutme-info {
+    flex-direction: column;
+  }
+  .work-experiance {
+    flex-direction: column;
+    width: 50%;
+  }
+}
