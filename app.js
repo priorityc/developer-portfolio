@@ -1,5 +1,13 @@
 const formData = {};
 const thankyou = document.getElementById("tnk");
+// the Project buttons
+
+fetch(`./projectDesc.json`)
+  .then((res) => res.json())
+  .then((data) => {
+    const newEl = document.createElement("p");
+    newEl.innerHTML = `<p>'${data[0].ProjectOne}'</p>`;
+  });
 
 validateForm = (e) => {
   e.preventDefault();
