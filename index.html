@@ -11,12 +11,13 @@
     ></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body >
     <!-- Hamburger Mobile view -->
 
     <!-- Nav-bar Desktop view -->
 
     <!--this will change for desctop-->
+   
     <header>
       <div>
         <ul class="nav-bar">
@@ -29,7 +30,7 @@
           </li>
           <li>
             <a
-              href="https://github.com/priorityc?tab=repositories"
+              href="#"
               class="navlinks"
               >Github</a
             >
@@ -45,13 +46,17 @@
       <div class="header-text">
         <h1>Hello</h1>
         <p>My name is Petya and I am <span>Web developer</span>.</p>
-        <a href="form-box">
+        <p>Click the button and leave me a message and I will get back to you.</p>
           <button class="hero-text-button">Hire me</button>
-        </a>
+       
       </div>
     </div>
   </header>
   <main>
+    <!-- The hidden modal -->
+    
+      
+
     <section>
     <div class='what-I-do'>
       <h1 class='header-1'>What can I do?</h1>
@@ -308,7 +313,7 @@
                 stroke-linejoin="round"
                 d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
               />
-            </svg> --> 
+            </svg>  
             <p>email: petya83dimitrova@gmail.com</p>
           </div>
           <p>Copywrite &copy; 2022 Petya Dimitrova</p>
@@ -324,6 +329,67 @@
         </div>
       </div>
     </footer>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h3>Contact me</h3>
+      <form
+      action="mailto:petya83dimitrova@gmail.com?subject=Contactme_website_form_submission"
+      method="post"
+      name="form1"
+    >
+      <!-- Input text Boxes input a simple text to aserver-->
+
+      <p>
+        <b>First Name: </b
+        ><input
+          type="text"
+          name="first_name"
+          value="First Name"
+          size="30"
+          maxlength="30"
+        />
+      </p>
+
+      <p>
+        <b>Last Name: </b
+        ><input
+          type="text"
+          name="second_name"
+          value="Last Name"
+          size="30"
+          maxlength="30"
+        />
+      </p>
+
+      <p>
+        <b>E-mail address: </b
+        ><input type="email" name="visitor_email" size="30" maxlength="40" />
+      </p>
+
+      <!-- Text Area -->
+
+      <p>
+        <b>Message:</b><br />
+        <!-- The col describe the wide and rows the depth of lines -->
+        <!-- The texarea is not empty and does NOT have value atribute and the value is within the element -->
+        <textarea name="address" cols="35" rows="5">
+Type your message here...</textarea
+        >
+      </p>
+
+      
+
+      <!-- Submit and reset buttons -->
+      <p>
+        <input type="submit" class='hero-text-button' name="submit" value="Submit" />
+        <p id='thanks'></p>
+        <input type="reset" class='inactive-btn' name="reset" value="Reset" />
+      </p>
+
+      <!-- Closing the form element -->
+    </form>
+    </div>
+    <div class="overlay hidden"></div>
     <script src="app.js"></script>
   </body>
 </html>
