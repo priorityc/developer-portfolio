@@ -340,6 +340,35 @@ input {
 
   border-radius: 10px;
 }
+/* the about-me facts */
+.about-me-facts {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  width: 60%;
+  margin: 50px auto;
+  color: #333;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.warehouse {
+  width: 300px;
+  border-radius: 5px;
+  color: #1864ab;
+}
+.warehouse:hover {
+  cursor: pointer;
+}
+
+.text-left {
+  padding: 30px 60px;
+}
+.left-right {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  border-radius: 5px;
+}
 
 .modal {
   position: absolute;

@@ -30,7 +30,7 @@
           </li>
           <li>
             <a
-              href="#"
+              href="https://github.com/priorityc?tab=repositories"
               class="navlinks"
               >Github</a
             >
@@ -198,6 +198,15 @@
             <p id="tnk"></p>
           </form></div> -->
         </section>
+        <section class='about-me-facts'>
+          <div><button class='left-right'><</button></div>
+          <div class='text-left'>
+          <h2>Learn more about me:</h2>
+          <p>I leave in small town near London and have two wonderfull kids. In my past job roles I have experinces a lot of challanging situation working in a fast places environmend I was required to be fit and adapt skills to meet the targets.But this is something that I want to bring to my future role as I love to be a dedicated worker</p>
+        </div>
+          <div><img  class='warehouse'src='https://images.unsplash.com/photo-1586528116022-aeda1613c63d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80' alt='warehouse' /></div>
+          <div class='div-btn'><button class='left-right'>></button></div>
+        </section>
        
       
     
@@ -275,7 +284,7 @@
         </div>
       </div>
     </div>
-    <!-- div footer whit contact form -->
+     div footer whit contact form -->
     <footer>
       <div class="footer">
         <div class="left-div">
@@ -333,18 +342,21 @@
       <button class="close-modal">&times;</button>
       <h3>Contact me</h3>
       <form
-      action="mailto:petya83dimitrova@gmail.com?subject=Contactme_website_form_submission"
+      action="mailto:petya83dimitrova@gmail.com"
+       onsubmit="return validateContactForm()"
+      enctype="text/plain"
       method="post"
       name="form1"
     >
       <!-- Input text Boxes input a simple text to aserver-->
 
       <p>
-        <b>First Name: </b
+        <b>Name: </b
         ><input
+          id='contact-name'
           type="text"
           name="first_name"
-          value="First Name"
+          placeholder="First Name"
           size="30"
           maxlength="30"
         />
@@ -353,17 +365,18 @@
       <p>
         <b>Last Name: </b
         ><input
+          id='contact-lastn'
           type="text"
           name="second_name"
-          value="Last Name"
+          placeholder="Last Name"
           size="30"
           maxlength="30"
         />
       </p>
 
       <p>
-        <b>E-mail address: </b
-        ><input type="email" name="visitor_email" size="30" maxlength="40" />
+        <b>E-mail: </b
+        ><input type="email" id='contact-email' name="visitor_email" placeholder='john@mail.com' size="30" maxlength="40" />
       </p>
 
       <!-- Text Area -->
@@ -372,8 +385,8 @@
         <b>Message:</b><br />
         <!-- The col describe the wide and rows the depth of lines -->
         <!-- The texarea is not empty and does NOT have value atribute and the value is within the element -->
-        <textarea name="address" cols="35" rows="5">
-Type your message here...</textarea
+        <textarea name="address" id='contact-message' placeholder='Type your message here...' cols="35" rows="5">
+</textarea
         >
       </p>
 
@@ -381,7 +394,7 @@ Type your message here...</textarea
 
       <!-- Submit and reset buttons -->
       <p>
-        <input type="submit" class='hero-text-button' name="submit" value="Submit" />
+        <input type="submit" class='hero-text-button validate-form' name="submit" value="Submit" />
         <p id='thanks'></p>
         <input type="reset" class='inactive-btn' name="reset" value="Reset" />
       </p>
