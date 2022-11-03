@@ -18,36 +18,60 @@
 
     <!--this will change for desctop-->
    
-    <header>
-      <div>
-        <ul class="nav-bar">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
-              class="navlinks"
-              >Linkedin</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/priorityc?tab=repositories"
-              class="navlinks"
-              >Github</a
-            >
-          </li>
-          <li><a href="#About-me-box" class="navlinks">About me</a></li>
-          <li><a href="#form-box" class="navlinks">Contact</a></li>
-        </ul>
+    <header class='desctop-header'>
+      <div  class='decstop-nav'>
+        
       </div>
+      </header>
+      <!-- Section MOBILE MENU -->
+      <header class='mobile-header'>
+   
+     <div><img class='logo-img' src='./logo.png' alt='logo' /></div>
+    
+      <div class="hamburger" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <ul class="nav-bar">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
+            class="navlinks"
+            >Linkedin</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/priorityc?tab=repositories"
+            class="navlinks"
+            >Github</a
+          >
+        </li>
+        <li><a href="#About-me-box" class="navlinks">About me</a></li>
+        <li><a href="#form-box" class="navlinks">Contact</a></li>
+      </ul>
+   
+
+     
+    </header>
+    <div class="topnav">
+      <div id="myLinks">
+        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">Linkedin</a>
+        <a href="https://github.com/priorityc?tab=repositories">Github</a>
+        <a href="#form-box">Contact</a>
+       </div>
+       </div>
+   
+    
     
     <!--HERO img same for Mobile and Desktopview-->
     <div class="header-image">
-      <div><img class="me" src="./resizedPetya.jpg" alt="Petya Dimitrova" /></div>
+      
       <div class="header-text">
-        <h1>Hello</h1>
-        <p>My name is Petya and I am <span>Web developer</span>.</p>
-        <p>Click the button and leave me a message and I will get back to you.</p>
-          <button class="hero-text-button">Hire me</button>
+        <h1>Let`s</h1>
+        <p>help you acheive your dreamed <span>website</span>.</p>
+          <button class="hero-text-button">Get in touch</button>
        
       </div>
     </div>
@@ -60,115 +84,81 @@
     <section>
     <div class='what-I-do'>
       <h1 class='header-1'>What can I do?</h1>
-      <div class='the-boxes'>
+      <div id='hidden'>Web development</div>
+      <!-- <div class='the-boxes'>
       <div class='title-box'>
-      <h2 class='title'>Project development</h2>
-      <p>I am able to build your project from the start to the end following your bussiness strategy and goals.</p>
+      <h2 class='title'></h2> -->
+      
+      <!-- <p><i>"I am able to build your project from the start to the end following your bussiness goals."</i></p>
     </div>
-      <div class='title-box'><h2 class='title'>Usability and Acessability</h2>
-        <p>Every web site should be acessible and usable and first so I make sure all the requirements are meet. </p>
+      <div class='title-box'><h2 class='title'></h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg-btn">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
+        </svg>
+         -->
+        <!-- <p><i>"Every web site should be acessible and usable and first so I make sure all the requirements are meet."</i></p>
     </div>
-      <div class='title-box'><h2 class='title'>Wareframes scatch</h2>
-        <p>Before actual coding process I will build your website wireframe to make sure all your requirements are included.</p>
-    </div>
-      <div class='title-box'><h2 class='title'>Website build</h2>
-        <p>The process of building website and application are the main expression of the whole process.</p>
-    </div>
-    </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-   
-      <!-- div section projects -->
-      <div class="left-side">
-        <div class='header-2'><h2>My Latest Projects</h2></div>
-       
-        <div class="project-box">
-          <div class="div1">
-            <img
-              class="div-images-projects"
-              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              alt="computer"
-            />
-            <h3>My first Project</h3>
-           
-            
-              <button class="learn-more">Learn more</button>
-            
-          </div>
-
-          <div class="div2">
-            <img
-              class="div-images-projects"
-              src="https://images.unsplash.com/photo-1492683513054-55277abccd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              alt="cake"
-            />
-            <h3>The Healthy Club app</h3>
-            
-            <a href="https://github.com/priorityc/Mid-progect-Healthy-blog">
-              <button class="learn-more">Learn nore</button></a
-            >
-          </div>
-
-          <div class="div3">
-            <img
-              class="div-images-projects"
-              src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              alt="react"
-            />
-            <h3>The Shoping app</h3>
-          
-            <a href="https://github.com/priorityc/shopping">
-              <button class="learn-more">Learn nore</button>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class='about-me'>
-        <h2 class='header--2'><span>What brings me hear?</span></h2>
-        <div class='about-me-box'>
-        <img class='about-me-img' src='https://images.unsplash.com/photo-1639549627672-fad13c93400c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fGNyZWF0aXZpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' alt='image with writing create' />
-        <div>
-        <div><h3>How do I decide to become<span>Web Developer?</span></h3></div>
-        <p>I have been allways that creative person that wanted to explore. One day after heading on my personal blog I become curious to know how are the Web sites builded and make that important step for  carrer change in Tech. So I set myself a goals to follow becouse I beleive that anything is possible</p>
-        <h3 class='h3-title'>My web development career path:</h3>
-        <ul>
-        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg> Introduction to Web Development
-        </li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg> Purple Beard Bootscamp
-        </li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg> Front end Web Developer at Cyberinitiation
-        </li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg> Study at Open university-Computing and IT
-        </li>
-      </ul></div>
-      </div>
-      </section>
-      <section class='skills'>
+      <div class='title-box'><h2 class='title'></h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg-btn">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+        </svg> -->
         
-        <div><img class='meeting-img' src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG1lZXRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' alt='people meeting together'/></div>
-       
-        <div>
-          <div class='global-absolute-2'><img class='working-img' src='https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fG1lZXRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' alt='woman working with computer' /></div>
-          <div class='global-absolute'>100% Positive feedback </div>
-        <h2>Let`s work together</h2>
-          <p class='skills-1'>Creativity</p>
-        <p class='skills-2'>Problem solving</p>
-        <p class='skills-3'>Team work</p>
-        <p>Analitical thinking</p>
-        <p>Customer focusing</p></div>
-      </div>
+        <!-- <p><i>"Before actual coding process I will build your website wireframe to make sure all your requirements are included.</i></p>
+    </div>
+      <div class='title-box'><h2 class='title'></h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg-btn">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+        </svg>
+        
+        <p><i>"The process of building website and application are the main expression of the whole process."</i></p> -->
+    <!-- </div>
+    </div>-->
+    </div> 
+  </section>
+  <section>
+    <h2 class='section-h2'>See how it works</h2>
+    <div class='how-cont'>
+    <div class='title-box'>
+      <img  class='how-img'src='https://images.unsplash.com/photo-1581349437898-cebbe9831942?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt='' />
+      <h3>Contact me</h3>
+      <p>Write your overal requirements and needs that you have in short message with your email and mobile number and I will get back to you to discuss your project further.</p>
+      
+    </div>
+    <div class='title-box'>
+      <img class='how-img'src='https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29udmVyc2F0aW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alt='' />
+      <h3>Communication</h3>
+      <p>After agreeament I will start on developing a project plan regarding your needs and requirements any services you offer or purhaps a blog site.</p>
+    </div>
+    <div class='title-box'>
+      <img class='how-img'src='https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aWRlYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60' alt='' />
+      <h3>Design</h3>
+      <p>Great idea has been agreed during our meeting and the work on designing process is started, colours, fonts and overal layout acording to User experiance.</p>
+    </div>
+    <div class='title-box'>
+      <img class='how-img'src='https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt= />
+      <h3>Wareframes</h3>
+      <p>Your projects is about to become reality, but before that the wareframe of the finished look of your project is discussed and the agree components is implemented online.</p>
+    </div>
+  </div>
+  <div class='congrat'>
+  <h2>Congratualtion you have your dreamed website!</h2>
+  <a href='index.html'>
+  <button class="hero-text-button">Get in touh</button>
+</a>
+</div>
+</section>
+
+  <section class='projects'>
+    <div class='div1'>
+      <h2>My Latest Projects</h2>
+      <div class='arrows'>
+      <button class='left-right left'><</button>
+      <button class='left-right right'>></button>
+    </div>
+    <a href='https://github.com/priorityc/Landing-page-blog'>
+      <button class="learn-more">Learn more</button></a>
+    </div>
+
 <!-- 
       <div class='first-box'><h2>Contact me</h2>
           <p>
@@ -198,95 +188,42 @@
             <p id="tnk"></p>
           </form></div> -->
         </section>
-        <section class='about-me-facts'>
-          <div><button class='left-right'><</button></div>
-          <div class='text-left'>
-          <h2>Learn more about me:</h2>
-          <p>I leave in small town near London and have two wonderfull kids. In my past job roles I have experinces a lot of challanging situation working in a fast places environmend I was required to be fit and adapt skills to meet the targets.But this is something that I want to bring to my future role as I love to be a dedicated worker</p>
-        </div>
-          <div><img  class='warehouse'src='https://images.unsplash.com/photo-1586528116022-aeda1613c63d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80' alt='warehouse' /></div>
-          <div class='div-btn'><button class='left-right'>></button></div>
-        </section>
        
       
     
       </main>
-        <!-- <div class="work-experiance"> -->
-          <!-- <div class="mobile-view">
-            <div>
-              <h2>My latest updates:</h2>
-              <img
-                class="exp-pic"
-                src="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                alt="projects"
-              />
-            </div>
-            <p>
-              My skills started to get evolve, when I was enrolled in Web
-              evelopment Internship for a company CYBERINITIATION. Thanks to
-              them and my entusiasm I become really confident in makeing some
-              more complex Projects.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <!-- <div> About me section  -->
 
-      <!-- <div class="About-me-box">
-        <h2>About me</h2>
-        <div class="aboutme-info">
-          <img
-            class="about-mepic"
-            src="https://scontent.fltn2-1.fna.fbcdn.net/v/t1.6435-9/196716094_183814183670240_2608692682586638501_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=bSYCwt03QS8AX93I4SG&_nc_ht=scontent.fltn2-1.fna&oh=00_AT-MBP6scrZAx4e_DRq2J2eZwql7mip7-GmIkXFYGpy6tQ&oe=62F70F81"
-            alt="me"
-          />
+        
+     <!-- div footer whit contact form -->
 
-          <p>
-            My name is Petya Dimitrova, I am Frond-end Web developer, I started
-            my new career followed by my quriosity what is behind the webpages.
-            My first step in tech field was to finish Introduction to Web
-            development course together with basic understending of Python
-            program language, and than I was very lucky to get enrolled in
-            Purple beard bootscamp Frond-end development, and I am exited to
-            create beautifull web pages for anyone interested to work with me.
-            If that sounds like a good fit for you don` hasitate to contact me
-            to discuss you project and build a great User Experiance.
-          </p>
-        </div>
-
-        <div id="form-box">
+      <footer class="footer">
+        <div class='form'>
           <h2>Contact me</h2>
-          <p>
-            Leave your name, email and message and I will get back to you soon.
-          </p>
           <form name="myform">
-            <label for="text">Name</label>
+            <label for="text">Name</label><br/>
             <input type="text" name="text" id="text" placeholder="john Smith" />
-            <label for="email">Email</label>
+            <label for="email">Email</label></br>
             <input
               type="text"
               name="email"
               id="email-in"
               placeholder="john@someemail.com"
-            />
-            <label for="message">Message</label>
+            /></br>
+            <label for="message">Message</label></br>
             <input
               type="text"
               name="message"
               id="message"
               placeholder="Write your message"
-            />
+            /></br>
 
             <button class="send-btn">send</button>
             <p id="tnk"></p>
           </form>
         </div>
-      </div>
-    </div>
-     div footer whit contact form -->
-    <footer>
-      <div class="footer">
+      
+    
         <div class="left-div">
           <h3>Contact me</h3>
           <div class="tel">
@@ -337,6 +274,7 @@
           ></a>
         </div>
       </div>
+    </div>
     </footer>
     <div class="modal hidden">
       <button class="close-modal">&times;</button>
