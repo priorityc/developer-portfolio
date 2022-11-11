@@ -569,6 +569,15 @@ input {
   backdrop-filter: blur(3px);
   z-index: 5;
 }
+.text-story {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+}
+.myimg-div {
+  padding: 24px;
+}
 /* the hamburger icon  */
 @media screen and (min-width: 768px) {
   .desctop-header {
@@ -707,99 +716,20 @@ input {
   .footer {
     margin-top: 98px;
   }
-}
-/* .how-cont {
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 78%;
-    gap: 5px;
+  .footer-icon {
+    width: 52px;
   }
-  .first-section {
-    width: 40%;
-  }
-  .resume,
-  .what-I-do {
-    width: 40%;
-    height: 200px;
-    margin-top: 10px;
-  }
-  .projects {
+  .skills-icons {
     display: flex;
+    gap: 12px;
   }
-  .title-box {
-    min-width: 30%;
-    padding: 16px;
-  }
-  .nav-bar {
-    display: none;
-  }
-  .modal {
-    width: 360px;
-  }
-  .form {
-    max-width: 50%;
+  .icons {
+    margin-left: 18px;
   }
   .left-div {
-    max-width: 50%;
+    width: 42%;
   }
-  .footer {
-    flex-direction: row;
+  .bi-person-workspace {
+    width: 42px;
   }
 }
-@media screen and (min-width: 900px) {
-  .mobile {
-    display: none;
-  }
-  .mobile-header {
-    display: block;
-  }
-  .how-cont {
-    max-width: 80%;
-    flex-direction: row;
-  }
-  .title-box {
-    max-width: 20%;
-  }
-  .hamburger {
-    display: none;
-  }
-  .desctop-header {
-    display: contents;
-  }
-  .first-section {
-    display: flex;
-    margin: 0 200px;
-    padding: 16px;
-  }
-  .what-I-do {
-    width: 50%;
-  }
-  .resume {
-    width: 50%;
-  }
-  .footer {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .left-div {
-    flex-direction: column;
-    gap: 25px;
-  }
-  .projects {
-    display: flex;
-    justify-content: center;
-    margin: 100px 100px;
-    gap: 20px;
-  }
-  .my-story,
-  .div1 {
-    width: 40%;
-  }
-  .div1 {
-    height: 250px;
-  }
-  .form { 
-    margin: 20px 35px;
-  }
-} */
