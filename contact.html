@@ -33,7 +33,7 @@
           >
         </li>
         <li><a href="./About-me/aboutme.html" class="navlinks">About me</a></li>
-        <li><a href="contact.html" class="navlinks">Contact</a></li>
+        <li><a href="#header-image" class="navlinks">Contact</a></li>
       </ul>
     
         </header>
@@ -82,66 +82,36 @@
   <main>
     <!-- The hidden modal -->
     
-      
-  <section class='ipad-sec-one'>
-    <div class='first-section'>
-      <h2 class='header-1'>Skills and Experiance?</h2>
-    <ul>
-      <li>Technical knowledge in areas such as client-side components, web application frameworks.</li>
-      <li>Experience with version control systems, and a thorough understanding of the architecture of web applications</li>
-      <li>Attention to detail</li>
-      <li>A logical approach to problem solving</li>
-      <li>the ability to work independently and in mixed teams</li>
-      <li>the ability to manage a complex range of tasks and meet deadlines</li>
-    </ul>
-    </div>
-    <div class='resume'>
-      <a href='./About-me/CVT.pdf'>
-      <h2 class='header-1'>Resume</h2>
-      </a>
-      </div>
-    
-  </section>
-  <!-- Second section INTERNSHIP -->
-    <section class='internship-div'>
-      <div class='work-exp'>
-      <h2>Work experiance</h2>
-      <h3>Internship at Cyberinitiation</h3>
-      <p>Currently working in on developing skills thru experiance in virtual Internship Job position as Front end Developer</p>
-      <p>Important aspects learned during the whole process is the colaboration in team work environment building Websites and application.</p>     
-    </div>
-    <div class='work-pic'>
-      <img class='internship' src='https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHdvcmslMjBleHBlcmlhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alt='computer'/>
-    </div>
-    </section>
+    <div class='contact-me'>
+      <h2>Contact me</h2>
+      <form 
+      class='contact-form'
+      action="mailto:petya83dimitrova@gmail.com"
+      onsubmit="return validateFooterForm()"
+      enctype="text/plain"
+      method="post"
+      name="myform">
+        <label for="text">Name</label><br/>
+        <input type="text" name="text" id="text" placeholder="john Smith" />
+        <label for="email-in">Email</label></br>
+        <input
+          type="text"
+          name="email"
+          id="email-in"
+          placeholder="john@someemail.com"
+        /></br>
+        <label for="message">Message</label></br>
+        <input
+          type="text"
+          name="message"
+          id="message"
+          placeholder="Write your message"
+        /></br>
 
-  
-  
-  <section class='mobile-div'>
-    <h2 class='section-h2'>Latest Projects</h2>
-    <div class='how-cont'>
-    <div class='title-box'>
-      <img class='how-img' src='./Maintop-content.png' alt='project-landingpage' />
-      <h3>Landing page</h3>
-      <p>The Landing page represents simple eye catching design with call to action button for a monthly subscription to the online fitness studio. It consist of header price section and about me section. This Project is part of my Internship at Ciberinitiation.</p>
-      
-    </div>
-    <div class='title-box'>
-      <img class='how-img' src='./Healthy-blog.png' alt='Healthy-blog-project' />
-      <h3>Healthy Blog</h3>
-      <p>A subscription form password protected.When the user subscribes to the service the rest of the content appears.The programing language JavaScript and JSON file format are in focus in this project. </p>
-    </div>
-    <div class='title-box'>
-      <img class='how-img' src='./BMI1.png' alt='BMI project' />
-      <h3>BMI calcolator</h3>
-      <p>This BMI calclator was built in with React application , simply enter your details and the calculator will show your BMI together with a short description of it.</p>
-    </div>
-    <div class='title-box'>
-      <img class='how-img' src='https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' alt= />
-      <h3>Wareframes</h3>
-      <p>Wireframes are important initial part of my projects and I am able to use Pencil, Figma platforms for designing websites and other tools for picking the right colours, typography, spaces and more..</p>
-    </div>
-    </div>
+        <button class="send-btn">send</button>
+        <p id="tnk"></p>
+      </form>
+      </div>
  
 </section>
     <section class='my-story'>
@@ -173,35 +143,7 @@
      <!-- div footer whit contact form -->
 
       <footer class="footer">
-       
-        <div class='form'>
-          <h2>Contact me</h2>
-          <form 
-          action="mailto:petya83dimitrova@gmail.com"
-          onsubmit="return validateFooterForm()"
-          enctype="text/plain"
-          method="post"
-          name="myform">
-            <label for="text">Name</label><br/>
-            <input type="text" name="text" id="text" placeholder="john Smith" />
-            <label for="email-in">Email</label></br>
-            <input
-              type="text"
-              name="email"
-              id="email-in"
-              placeholder="john@someemail.com"
-            /></br>
-            <label for="message">Message</label></br>
-            <input
-              type="text"
-              name="message"
-              id="message"
-              placeholder="Write your message"
-            /></br>
-
-            <button class="send-btn">send</button>
-            <p id="tnk"></p>
-          </form>
+     
         </div>
         <div class='right-div'>
           <div class='skills-icons'>
