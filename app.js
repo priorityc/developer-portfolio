@@ -1,35 +1,7 @@
-// const formData = {};
-// const thankyou = document.getElementById("tnk");
-// // the Project buttons
+// use small tag to show the error message
+// if input not valid make color border redby adding error classto the form field
+// if input is valid add green border like adding sucess class
 
-// fetch(`./projectDesc.json`)
-//   .then((res) => res.json())
-//   .then((data) => {
-//     const newEl = document.createElement("p");
-//     newEl.innerHTML = `<p>'${data[0].ProjectOne}'</p>`;
-//   });
-
-// validateForm = (e) => {
-//   e.preventDefault();
-//   formData.Name = document.querySelector("#text").value;
-//   formData.Email = document.querySelector("#email-in").value;
-//   formData.Message = document.querySelector("#message").value;
-
-//   if (!formData.Name) {
-//     return alert("Name must be filled out");
-//   } else if (formData.Email.indexOf("@") == -1) {
-//     return alert("Email must be filled out");
-//   } else if (!formData.Message) {
-//     alert("Please write your message");
-//   }
-//   localStorage.setItem("person", formData);
-//   localStorage.setItem("formData", JSON.stringify(formData));
-//   thankyou.innerText = "Thanks your message was send";
-// };
-// document.querySelector(".send-btn").addEventListener("click", validateForm);
-// function myFunction1(x) {
-//   x.classList.toggle("change");
-// }
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -43,7 +15,7 @@ function myFunction() {
 const modal = document.querySelector(".modal");
 const overlayBlur = document.querySelector(".overlay");
 const hireMe = document.querySelector(".hero-text-button");
-const contactFormData = {};
+let contactFormData = {};
 const closeM = document.querySelector(".close-modal");
 const validateB = document.querySelector(".validate-form");
 const tnkyou = document.getElementById("thanks");
@@ -55,31 +27,6 @@ const openModal = function () {
 };
 hireMe.addEventListener("click", openModal);
 
-// validate the form and Submit it
-validateContactForm = () => {
-  contactFormData.Name = document.forms["form1"]["first_name"].value;
-  contactFormData.LastName = document.forms["form1"]["second_name"].value;
-  contactFormData.Message = document.getElementById("contact-message").value;
-  contactFormData.Email = document.getElementById("contact-email").value;
-
-  if (!contactFormData.Name) {
-    alert("Name must be filled out");
-    return false;
-  } else if (!contactFormData.LastName) {
-    alert("Last Name must be filled out");
-    return false;
-  } else if (contactFormData.Email.indexOf("@") == -1) {
-    alert("Email must be filled out");
-    return false;
-  } else if (!contactFormData.Message) {
-    alert("Message must be filled out");
-    return false;
-  } else {
-    tnkyou.textContent = "Thanks your message have been submited!";
-  }
-};
-
-// close the Modal
 const closeModal = function () {
   modal.classList.add("hidden");
   overlayBlur.classList.add("hidden");
@@ -87,114 +34,176 @@ const closeModal = function () {
 closeM.addEventListener("click", closeModal);
 overlayBlur.addEventListener("click", closeModal);
 
-// Validate and submit the other form
-const footerForm = {};
-const thansMsg = document.getElementById("tnk");
-validateFooterForm = () => {
-  footerForm.text = document.forms["myform"]["text"].value;
-  footerForm.email = document.forms["myform"]["email"].value;
-  footerForm.message = document.getElementById("message").value;
+//collect the data
+const nameEl = document.querySelector("#first-name");
+const lastnameEl = document.querySelector("#last-name");
+const emailEl = document.querySelector("#email");
+const messageEl = document.querySelector("#message");
 
-  if (!footerForm.text) {
-    alert("Name must be filled out");
-    return false;
-  } else if (!footerForm.email.indexOf("@") == -1) {
-    alert("Email must be filled out");
-    return false;
-  } else if (!footerForm.message) {
-    alert("Message must be filled out");
-    return false;
+const form = document.querySelector("#form");
+
+// attach submit event to the form
+form.addEventListener("submit", function (e) {
+  // prevent the form from submitting
+  e.preventDefault();
+});
+// The following isRequired() function returns true if the input argument is empty:
+const isRequired = (value) => (value === "" ? false : true);
+// The following isBetween() function returns false if the length argument is not between the min and max argument:
+const isBetween = (length, min, max) =>
+  length < min || length > max ? false : true;
+// check if the email is valid with regular expresion
+const isEmailValid = (email) => {
+  const re =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+
+/* ^	The password starts
+(?=.*[a-z])	The password must contain at least one lowercase character
+(?=.*[A-Z])	The password must contain at least one uppercase character
+(?=.*[0-9])	The password must contain at least one number
+(?=.*[!@#$%^&*])	The password must contain at least one special character.
+(?=.{8,})	The password must be eight characters or longer*/
+
+// The function that showError() function highlights the border of the input field and displays an error message if the input field is invalid:
+const showError = (input, message) => {
+  // get the perent element of the input field which is the div el
+  const formField = input.parentElement;
+  //Second, remove the success class and add the error class to the form-field element:
+  formField.classList.remove("success");
+  formField.classList.add("error");
+
+  // show the error message
+  const error = formField.querySelector("small");
+  error.textContent = message;
+};
+
+// Same function for Sucess
+const showSuccess = (input) => {
+  // get the form-field element
+  const formField = input.parentElement;
+
+  // remove the error class
+  formField.classList.remove("error");
+  formField.classList.add("success");
+
+  // hide the error message
+  const error = formField.querySelector("small");
+  error.textContent = "";
+};
+
+// VALIDATION inputs
+const checkUsername = () => {
+  let valid = false;
+  const min = 3,
+    max = 25;
+  const nameE = nameEl.value.trim();
+
+  if (!isRequired(nameE)) {
+    showError(nameEl, "Username cannot be blank.");
+  } else if (!isBetween(nameE.length, min, max)) {
+    showError(nameEl, `Name must be between ${min} and ${max} characters.`);
   } else {
-    thansMsg.textContent = "Thanks your message was send!";
+    showSuccess(nameEl);
+    valid = true;
+  }
+  // return true if passes
+  return valid;
+};
+
+const chacklastName = () => {
+  let valid = false;
+  const min = 3,
+    max = 25;
+  const lastnameE = lastnameEl.value.trim();
+  if (!isRequired(lastnameE)) {
+    showError(lastnameEl, "Last name cannot be blank.");
+  } else if (!isBetween(lastnameE.length, min, max)) {
+    showError(
+      lastnameEl,
+      `Last name  must be between ${min} and ${max} characters.`
+    );
+  } else {
+    showSuccess(lastnameEl);
+    valid = true;
+  }
+  // return true if passes
+  return valid;
+};
+
+// validate email field
+const checkEmail = () => {
+  // initial default state
+  let valid = false;
+  const email = emailEl.value.trim();
+  if (!isRequired(email)) {
+    showError(emailEl, "Email cannot be blank.");
+  } else if (!isEmailValid(email)) {
+    showError(emailEl, "Email is not valid.");
+  } else {
+    showSuccess(emailEl);
+    valid = true;
+  }
+  return valid;
+};
+
+const chackMessage = () => {
+  let valid = false;
+  const min = 3,
+    max = 40;
+  const messageE = messageEl.value.trim();
+  if (!isRequired(messageE)) {
+    showError(messageEl, "Message cannot be blank.");
+  } else if (!isBetween(messageE.length, min, max)) {
+    showError(
+      messageEl,
+      `Message must be between ${min} and ${max} characters.`
+    );
+  } else {
+    showSuccess(messageEl);
+    valid = true;
+  }
+  // return true if passes
+  return valid;
+};
+
+const sendEmail = () => {
+  form.setAttribute("action", "mailto:petya83dimitrova@gmail.com");
+};
+
+// Modify the submit event handler
+const validateModal = (e) => {
+  // prevent the form from submitting
+  e.preventDefault();
+
+  // validate forms
+  let isnameValid = checkUsername(),
+    islastnameValid = chacklastName(),
+    isEmailValid = checkEmail(),
+    isMessageValid = chackMessage();
+
+  let isFormValid =
+    isnameValid && islastnameValid && isEmailValid && isMessageValid;
+
+  // submit to the server if the form is valid
+  // Finally, submit data to the server if the form is valid specified the isFormValid flag.
+  if (isFormValid) {
+    sendEmail();
   }
 };
-// the about me facts
-// const rightBTN = document.querySelector(".right");
-// const leftBTN = document.querySelector(".left");
-// const hidendiv = document.querySelector(".text-left_one");
-// const hidendiv2 = document.querySelector(".text-left_two");
-// const textP = document.querySelector(".text-left");
-// const hidendiv3 = document.querySelector(".text-left_three");
-// let slideimages = new Array();
-// let text = new ArrayBuffer();
+form.addEventListener("submit", validateModal);
 
-// slideimages[0] = new Image();
-// slideimages[0].src = "images-slide/house.jpg";
+// validate the footer form
+const nameData = document.getElementById("contact-name").value;
+const emailData = document.getElementById("contact-email").value;
+const messageData = document.getElementById("contact-message").value;
+console.log(nameData);
 
-// slideimages[1] = new Image();
-// slideimages[1].src = "images-slide/house.jpg";
+validateFooterForm = (e) => {
+  e.preventDefault();
 
-// slideimages[2] = new Image();
-// slideimages[2].src = "images-slide/new-career.jpg";
-// text[0] = "";
-
-// let step = 0;
-
-// slide = () => {
-//   document.querySelector(".warehouse").src = slideimages[step].src; //slideimages[0].src
-
-//   if (step < 2) {
-//     step++;
-//   } else {
-//     step = 0;
-//   }
-//   //hide text one and three and show text 2
-//   hidendiv.classList.add("hidden-p"); //hide div
-//   hidendiv3.classList.add("hidden-p");
-//   // hide1
-//   hidendiv3.classList.add("hidden-p");
-//   hidendiv2.classList.remove("hidden-p"); //show 2
-//   //hide 3
-//   //show text 3 but hide two
-//   hidendiv2.classList.add("hidden-p");
-//   hidendiv3.classList.remove("hidden-p");
-// };
-// //hide 2
-
-// rightBTN.addEventListener("click", slide);
-
-// backslide = () => {
-//   document.querySelector(".warehouse").src = slideimages[step].src;
-//   if (step > 2) {
-//     step--;
-//   } else {
-//     step = 0;
-//   }
-//   hidendiv.classList.add("hidden-p"); // hide1
-//   hidendiv2.classList.remove("hidden-p"); //show 2
-
-//   hidendiv3.classList.add("hidden-p"); //hide 3
-//   hidendiv.classList.remove("hidden-p"); //show 1
-//   hidendiv2.classList.add("hidden-p"); // 2
-
-//   hidendiv.classList.remove("hidden-p");
-// };
-// leftBTN.addEventListener("click", backslide);
-
-// The what I do function
-// const header1 = document.querySelector(".header-1");
-// const firstDiv = document.querySelector(".what-I-do");
-
-// whatIdo = () => {
-//   fetch(`./projectDesc.json`)
-//     .then((res) => res.json())
-//     .then((data) => {
-//       document.querySelector(".header-1").style.display = "none";
-//       document.getElementById("hidden").innerHTML = `<ol>
-//       <li>'${data[1].WhatIdo}'</li>
-//       <li>'${data[2].listone}'</li>
-//       <li>'${data[3].listtwo}'</li></ol>`;
-//     });
-// };
-// header1.addEventListener("mouseover", whatIdo);
-
-// const buttonLeft = document.querySelector(".left");
-// const buttonRight = document.querySelector(".right");
-// const projectOne = document.querySelector(".div1");
-// const projectTwo = document.querySelector(".div2");
-
-// slideproject = () => {
-//   projectTwo.classList.remove("hidden-div");
-//   projectOne.classList.add("hidden-div");
-// };
-// buttonRight.addEventListener("click", slideproject);
+  if (nameData === "") {
+    return alert("Please write your name!");
+  }
+};
