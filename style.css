@@ -469,6 +469,7 @@ form {
 }
 
 /* FOOTER */
+
 .right-div {
   display: flex;
   flex-direction: column;
@@ -499,14 +500,19 @@ form {
   gap: 20px;
   padding-right: 30px;
 }
+#save {
+  color: #e7f5ff;
+}
 /* form */
 .form #contact-name,
 #contact-email {
   background-color: #1e2831;
+  color: #e7f5ff;
   border: none;
   width: 260px;
 }
 .form #contact-message {
+  color: #e7f5ff;
   width: 260px;
   height: 130px;
   background-color: #1e2831;
@@ -682,6 +688,13 @@ textarea {
   border-bottom: 8px solid #86c5ff;
   height: 60px;
   text-align: center;
+}
+.valid {
+  background-color: lightgreen;
+}
+
+.invalid {
+  background-color: orange;
 }
 
 /* the hamburger icon  */
