@@ -261,6 +261,26 @@ ul li a {
 .how-img {
   width: 100%;
 }
+/* the first section updates */
+.updates-container {
+  min-width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 36px;
+  background-color: #28333e;
+  color: #ffe8cc;
+  border-radius: 5px;
+  margin-bottom: 70px;
+}
+.updates-paragr {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+/* .updates-paragr {
+  width: 50%;
+} */
 
 .resume {
   background-image: url("https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -699,6 +719,13 @@ textarea {
 
 /* the hamburger icon  */
 @media screen and (min-width: 768px) {
+  .updates-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    gap: 19px;
+  }
   .desctop-header {
     display: none;
   }
@@ -802,6 +829,11 @@ textarea {
   }
 }
 @media screen and (min-width: 900px) {
+  .updates-container {
+    width: 30%;
+    margin-bottom: 70px;
+    gap: 20px;
+  }
   .first-container {
     width: 1400px;
     margin: 0 auto;

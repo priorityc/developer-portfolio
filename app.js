@@ -40,7 +40,8 @@ const lastnameEl = document.querySelector("#last-name");
 const emailEl = document.querySelector("#email");
 const messageEl = document.querySelector("#message");
 
-const formEl = document.getElementById("#form");
+const formEl = document.getElementById("form");
+console.log(formEl);
 
 // attach submit event to the form
 formEl.addEventListener("submit", function (e) {
@@ -309,26 +310,37 @@ const validateFooter = () => {
   }
 };
 submitBTN.addEventListener("submit", validateFooter);
-//   // return true if passes
-//   return valid;
-// };
+// building slides
+// create new arrey
+let slideimages = new Array();
 
-// const validateFooterForm = () => {
-//   // prevent the form from submitting
+slideimages[0] = new Image();
 
-//   // validate forms
-//   let isnameValid = checkName(),
-//     isEmailValid = checkEmaill(),
-//     isMessageValid = chackMessages();
+slideimages[0].src = "./images-slide/./updates-slide/sniping1.png";
 
-//   let isFooterFormValid = isnameValid && isEmailValid && isMessageValid;
+slideimages[1] = new Image();
 
-//   // submit to the server if the form is valid
-//   // Finally, submit data to the server if the form is valid specified the isFormValid flag.
-//   if (isFooterFormValid) {
-//     foterForm.submit();
-//   }
-// };
-// foterForm.addEventListener("submit", validateFooterForm);
+slideimages[1].src = "./images-slide/./updates-slide/sniping2.png";
 
-//declare two patterns
+slideimages[2] = new Image();
+
+slideimages[2].src = "./images-slide/./updates-slide/sniping3.png";
+
+let step = 0;
+
+function slideshow() {
+  //= means we change actual image source to new arrey of images and chosing position indicated by step
+  document.getElementById("slide").src = slideimages[step].src; //give the referance to the image/src means we refer to actual img source
+  //increase step by one each time when is evaluated
+  //if step = 1 display 2 if step= 0 display 1
+  if (step < 2) {
+    step++;
+  } else {
+    //when step = 2 set it back to 0
+    step = 0;
+  }
+  // weit for 3 sec and then call the slideshow func to display next img
+  setTimeout(slideshow, 5000);
+}
+
+slideshow();
